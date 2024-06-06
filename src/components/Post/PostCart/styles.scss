@@ -1,0 +1,48 @@
+.post-cart {
+  position: relative;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 4px;
+
+    transition: all .3s ease;
+    top: 0;
+
+    &:hover {
+      transform: translateY(-20px);
+
+      .post-cart__hint {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 280px;
+    max-height: 280px;
+  }
+
+  &__preview {
+    padding-right: 16px;
+    padding-bottom: 12px;
+
+    font-size: 20px;
+  }
+
+  &__hint {
+    position: absolute;
+    bottom: -24px;
+
+    opacity: 0;
+    transition: all .3s ease;
+
+    line-height: 24px;
+    color: var(--color-jane-purple);
+
+    &-text {
+      padding-bottom: 4px;
+    }
+  }
+}

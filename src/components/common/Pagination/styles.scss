@@ -1,0 +1,29 @@
+.paginate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  list-style: none;
+
+  &__item {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    background-color: var(--color-bleached-silk);
+    cursor: pointer;
+
+    &.--active {
+      color: var(--color-white);
+      background-color: var(--color-chaos-black);
+    }
+  }
+
+  &__more-button {
+    font-size: 30px;
+  }
+}
