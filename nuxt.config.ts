@@ -18,9 +18,7 @@ export default defineNuxtConfig({
   },
   imports: {
     dirs: [
-      'utils/**/*.ts',
-      'assets/mock/**/*.ts', 'assets/*.ts',
-      'stores/**/*.ts'
+      'assets/**/*.ts', 'assets/*.ts',
     ],
     presets: [
       {
@@ -31,5 +29,10 @@ export default defineNuxtConfig({
   },
   experimental: {
     renderJsonPayloads: false
-  }
+  },
+  runtimeConfig: {
+    public: {
+      API_URL: process.env.API_URL!
+    }
+  },
 })

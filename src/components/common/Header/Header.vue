@@ -1,20 +1,24 @@
-<script setup lang="ts"></script>
-
 <template>
   <header class="header">
-    <img
-      class="header__log0"
-      src="/icons/logo.svg"
-      width="84"
-      height="25"
-      alt="QTIM"
-    />
+    <NuxtLink to="/">
+      <img
+        class="header__log0"
+        src="/icons/logo.svg"
+        width="84"
+        height="25"
+        alt="QTIM"
+      />
+    </NuxtLink>
 
     <div class="header__wrapper">
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item">Works</li>
-          <li class="header__nav-item">About</li>
+          <li class="header__nav-item">
+            <NuxtLink to="#">Works</NuxtLink>
+          </li>
+          <li class="header__nav-item">
+            <NuxtLink to="#">About</NuxtLink>
+          </li>
         </ul>
       </nav>
 
@@ -23,7 +27,13 @@
           <img src="/icons/uk.svg" width="24" height="24" alt="UK" />
         </div>
 
-        <button class="header__button">Let’s work</button>
+        <NuxtLink
+          target="_blank"
+          to="https://qtim.pro/"
+          class="header__link-go"
+        >
+          Let’s work
+        </NuxtLink>
       </div>
     </div>
   </header>

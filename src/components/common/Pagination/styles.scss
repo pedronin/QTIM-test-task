@@ -16,7 +16,9 @@
     border-radius: 12px;
     background-color: var(--color-bleached-silk);
     cursor: pointer;
+    transition: all .3s ease;
 
+    &:hover,
     &.--active {
       color: var(--color-white);
       background-color: var(--color-chaos-black);
@@ -25,5 +27,16 @@
 
   &__more-button {
     font-size: 30px;
+    user-select: none;
+
+    &:hover {
+      background-color: #c5c5c5;
+    }
+
+    &.--left {
+      img {
+        transform: rotate(-180deg);
+      }
+    }
   }
 }

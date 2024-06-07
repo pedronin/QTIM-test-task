@@ -5,12 +5,8 @@
   <div class="container">
     <slot />
   </div>
-<!--   
-  <Footer
-    :markets="footerMock.markets"
-    :socials="footerMock.socials"
-    :pages="footerMock.pages"
-  ></Footer> -->
+
+  <Footer />
 </template>
 
 <style scoped lang="scss"></style>

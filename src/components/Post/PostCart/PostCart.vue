@@ -3,21 +3,20 @@ import type { TPostCartProps } from "./types";
 
 const { id, preview, image, title } = defineProps<TPostCartProps>();
 
-const isHoverCart = ref(false);
 const hintRef = ref<HTMLElement | null>(null);
 </script>
 
 <template>
   <div class="post-cart">
-    <div class="post-cart__content">
-      <img :src="image" width="280" height="280" :alt="title" />
+    <NuxtLink :to="`post/${id}`" class="post-cart__content">
+      <img src="/img/example-small.png" :alt="title" />
 
       <span class="post-cart__preview">
         {{ preview }}
       </span>
 
-      <span ref="hintRef" class="post-cart__hint"> Read more </span>
-    </div>
+      <span ref="hintRef" class="post-cart__hint">Read more</span>
+    </NuxtLink>
   </div>
 </template>
 

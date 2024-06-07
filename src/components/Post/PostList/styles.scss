@@ -1,11 +1,7 @@
-.root {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-
-  .post-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 33px 40px;
-  }
+.post-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  justify-content: space-between;
+  gap: 40px 32px;
 }

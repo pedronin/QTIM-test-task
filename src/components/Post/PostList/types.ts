@@ -1,3 +1,7 @@
 import type { IPost } from "~/types"
 
-export type TPostCartProps = Pick<IPost, "id" | "preview" | "image" | "title">
+export interface IPostListProps {
+  posts: IPost[];
+  pending: boolean;
+  error?: FetchError;
+}
